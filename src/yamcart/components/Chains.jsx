@@ -49,7 +49,7 @@ const Chains = () => {
 
   return (
       <div className='mediaChainSection'>
-    <div className='search'>🔎 Your 🥣 is Loading....</div>
+      {loading && <div className='search'>🔎 Your 🥣 is Loading....</div>}
       <div className="btnSection">
         <button onClick={()=>handleScroller("left")}>
             <FaRegArrowAltCircleLeft className='btnIcons'/>
