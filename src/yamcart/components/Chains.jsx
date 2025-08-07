@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react'
 import { API_URL } from '../api'
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
-import { RotatingLines } from 'react-loader-spinner'
+import { ClipLoader } from 'react-spinners';
+
 
 
 const Chains = () => {
@@ -56,17 +57,11 @@ const Chains = () => {
       <div className="loader">
         Be readyyy🍜....Loading
       </div>
-      <RotatingLines
-        visible={true}
-        height="96"
-        width="96"
-        color="grey"
-        strokeWidth="5"
-        animationDuration="0.75"
-        ariaLabel="rotating-lines-loading"
-        wrapperStyle={{}}
-        wrapperClass=""
-  />
+      <ClipLoader
+  color="grey"
+  loading={true}
+  size={70}
+/>
   
    </>
 }
