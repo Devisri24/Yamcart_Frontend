@@ -2,14 +2,12 @@ import React, {useState, useEffect} from 'react'
 import { API_URL } from '../api'
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
-import { ClipLoader } from 'react-spinners';
-
 
 
 const Chains = () => {
     const [vendorData, setVandorData] = useState([]);
     const [scrollPosition, setScrollPosition] = useState(0);
-    const [loading ,setLoading] = useState(true)
+    const [loading ,setLoading] = useState(true);
   
 
     const vendorFirmHandler = async ()=>{
@@ -51,23 +49,7 @@ const Chains = () => {
 
   return (
       <div className='mediaChainSection'>
-
-      <div className="loaderSection">
-        {loading && <>
-      <div className="loader">
-        Be readyyy🍜....Loading
-      </div>
-      <ClipLoader
-  color="grey"
-  loading={true}
-  size={70}
-/>
-  
-   </>
-}
-      </div>
-      
-
+    <div className='search'>🔎 Your 🥣 is Loading....</div>
       <div className="btnSection">
         <button onClick={()=>handleScroller("left")}>
             <FaRegArrowAltCircleLeft className='btnIcons'/>
@@ -76,7 +58,7 @@ const Chains = () => {
             <FaRegArrowAltCircleRight className='btnIcons'/>
         </button>
       </div>
-        <h3>Top Restaurant chains in Gajuwaka</h3>
+        <h3>Top Restaurant chains in Visakhapatnam</h3>
         <section className="chainSection" id="chainGallery" onScroll={(e)=>setScrollPosition(e.target.scrollLeft)}>
             {vendorData.vendors && vendorData.vendors.map((vendor)=>{
                 return(
